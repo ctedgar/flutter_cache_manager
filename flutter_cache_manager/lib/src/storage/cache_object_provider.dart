@@ -10,6 +10,8 @@ class CacheObjectProvider implements CacheInfoRepository {
 
   CacheObjectProvider(this.path);
 
+  String get tableCacheObject => _tableCacheObject;
+
   @override
   Future open() async {
     db = await openDatabase(path, version: 3,
