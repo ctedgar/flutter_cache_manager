@@ -39,7 +39,7 @@ class CacheStore {
     _cacheInfoRepository = cacheRepoProvider ?? _getObjectProvider();
   }
 
-  get cacheInfoRepository => _cacheInfoRepository;
+  Future<CacheInfoRepository> get cacheInfoRepository => _cacheInfoRepository;
 
   Future<CacheInfoRepository> _getObjectProvider() async {
     final databasesPath = await getDatabasesPath();
